@@ -1,0 +1,1 @@
+the end goal is to read in all of a player's gear, then compare all combinations of that players gear for a given action (such as nuking a given target) and to report what combination of gear would be best to use when casting that spell
