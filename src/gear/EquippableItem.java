@@ -13,6 +13,7 @@ public class EquippableItem extends Item {
 	private int STR,DEX,VIT,AGI,INT,MND,CHR;
 	private int DMG,DEF,HP,MP;
 	private Hashtable<String,Integer> stats;
+	private String augments;
 	
 	public EquippableItem(Hashtable<String, String> itemInfo, Hashtable<String, String> itemDescription) {
 		super(itemInfo, itemDescription);
@@ -22,11 +23,21 @@ public class EquippableItem extends Item {
 		super(itemInfo, itemDescription);
 		populateStats();
 	}
+	
+	@Deprecated
 	public EquippableItem(int id, String name, String description) {
 		super(id, name, description);
 		populateStats();
 	}
 
+	public void setAugments(final String augments) {
+		this.augments = augments;
+	}
+	
+	public String getAugments() {
+		return augments;
+	}
+	
 	public String getStats() {
 		String statString = "";
 		for (String stat : statNames) {
